@@ -33,9 +33,9 @@ const Footer = ({quickLinks}: {quickLinks: LinkType[]}) => {
   const contact = {
     address: {
       mapLink: "https://www.google.com/maps",
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, praesentium."
+      text: "Address :-NH 227, Near Petrol Pump, Harlakhi - 847240"
     },
-    reachOut: ["Landline: +91-1126122723, +91-1126122724", "Mobile: +91-9871600061, 91-9871600062", "Email: school@gdgoenka.com"]
+    reachOut: ["Mobile :- +91-9507356101, 9508107970", "Email :- upsharlakhi@gmail.com"]
   }
   return (
     <footer className="px-2 mt-[2.5rem] mb-[3rem] md:mb-0">

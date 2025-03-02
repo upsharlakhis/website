@@ -8,8 +8,11 @@ import {NoticeCard} from "@/components/NoticeCard"
 import { CarouselComp } from "@/components/CarouselComp";
 import { BasicCard, SectionProps } from "@/types/universalTypes";
 
+interface EcaCard extends BasicCard {
+  activities: string[]
+}
 interface EcaContent extends SectionProps {
-  cards: BasicCard[];
+  cards: EcaCard[];
 }
 
 interface SchoolDivisionsContent extends SectionProps {
@@ -42,28 +45,29 @@ export default function HomePage() {
     subHeading: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, aperiam.",
     cards: [
       {
-        title: "Forest Adventure",
+        title: "Academic Clubs",
         src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        activities: ['Science Club', 'Math Club', 'Debate Club', 'Quiz Team'],
       },
       {
-        title: "Valley of life",
+        title: "Sports and Athletics",
         src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        activities: ['Football', 'Basketball', 'Cricket'],
       },
       {
-        title: "Sala behta hi jayega",
+        title: "Arts and Culture",
         src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        activities: ['Music Band', 'Drama/Theater Club', 'Dance Club', 'Painting & Crafts Club']
       },
       {
-        title: "Forest Adventure",
+        title: "Leadership and Community Service",
         src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        activities: ['Student Council', 'Environmental Awareness']
       },
       {
-        title: "Valley of life",
+        title: "Technology and Innovation",
         src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        title: "Sala behta hi jayega",
-        src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        activities: ['Coding', 'Gaming and E-Sports']
       },
     ],
   };
@@ -73,20 +77,24 @@ export default function HomePage() {
     subHeading: "Nurturing Young Minds, Building Strong Foundations",
     cards: [
       {
-        title: "Forest Adventure",
+        title: "Foundational Stage (5 years)",
         src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Play-based, activity-based learning to develop motor skills, language, and social abilities",
       },
       {
-        title: "Valley of life",
+        title: "Preparatory Stage (3 years)",
         src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Introduction of structured subjects like reading, writing, mathematics, and basic science in a more interactive manner",
       },
       {
-        title: "Behta hi jayega",
+        title: "Middle Stage (3 years)",
         src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Subject-specific learning with hands-on projects, coding, and vocational exposure",
       },
       {
-        title: "Behta hi jayega",
+        title: "Secondary Stage (4 years)",
         src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Multidisciplinary education, flexibility in subject choices, and skill-based learning to prepare for higher education or careers", 
       },
     ],    
   }
@@ -97,12 +105,12 @@ export default function HomePage() {
     misionVisionCards: [
       {
         title: "Our Mission",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, aperiam.",
+        description: "Our vision at Universal Public School is to create a world-class educational institution that empowers students to achieve excellence in all aspects of life. We aim to foster a community of learners who are academically proficient, socially responsible, personally confident, and mentally resilient. Our goal is to make Universal Public School a launching pad for students to achieve their dreams and become successful, responsible, and compassionate individuals who make a positive impact in the world. We are committed to leading our school community towards achieving this vision and creating a brighter future for our students.",
         src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
       {
         title: "Our Vision",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, aperiam.",
+        description: "At Universal Public School, we are committed to fostering a learning environment that nurtures curiosity, innovation, and holistic development. Our school module is designed to provide a well-structured, engaging, and student-centric approach to education, ensuring that every learner reaches their full potential. Our Mission at Universal Public School, we are committed to fostering a learning environment that nurtures curiosity, innovation, and holistic development. Our school module is designed to provide a well-structured, engaging, and student-centric approach to education, ensuring that every learner reaches their full potential",
         src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
     ],
@@ -113,49 +121,49 @@ export default function HomePage() {
     subHeading: "Nurturing Young Minds, Building Strong Foundations",
     messages: [
       {
-        title: "Our Mission",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, aperiam.",
+        title: "MD Message",
+        description: "Universal Public School is committed to empowering children's journeys while contributing to national transformation by enhancing infrastructure and fostering nation-building through quality education.",
         src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "Lorem Ipsum",
-        designation: "Lorem Ipsum, lorem ipsum",
-        education: "Master in Architecture"
+        name: "Ar.Ruchita Choudhary",
+        designation: "Managing Director",
+        education: "Universal Public School, Harlakhi"
       },
       {
-        title: "Our Vision",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, aperiam.",
+        title: "School Coordinator Message",
+        description: "Education is more than just academic success, it is the foundation upon which our children develop critical thinking, problem-solving skills, and a sense of responsibility.",
         src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "Lorem Ipsum",
-        designation: "Lorem Ipsum, lorem ipsum",
-        education: "Master in Architecture"
+        name: "Mr. Raghvesh Chourasiya",
+        designation: "Administrative Director",
+        education: "Universal Public School, Harlakhi"
       },
     ],
   }
 
   const noticeContent: NoticeContent = {
     heading: "Notice Content",
-    subHeading: "Nurturing Young Minds, Building Strong Foundations",
+    subHeading: "",
     notices: [
       {
-        title: "Lorem Ipsum  Lorem Hello this is this guy",
-        description: "Lorem Ipsum  Lorem Hello this is this guy, Lorem Ipsum  Lorem Hello this is this guy,",
+        title: "Mobile App User Manual for Parents",
+        description: "",
         src: 'https://www.svgrepo.com/show/450458/link.svg',
         href: 'https://www.svgrepo.com/show/450458/link.svg'
       },
       {
-        title: "Lorem Ipsum  Lorem Hello",
-        description: "Lorem Ipsum  Lorem Hello this is this guy, Lorem Ipsum  Lorem Hello this is this guy,",
+        title: "Mobile App Key Points",
+        description: "",
         src: 'https://www.svgrepo.com/show/450458/link.svg',
         href: 'https://www.svgrepo.com/show/450458/link.svg'
       },
       {
-        title: "Lorem Ipsum  Lorem Hello this is this guy",
-        description: "Lorem Ipsum  Lorem Hello this is this guy, Lorem Ipsum  Lorem Hello this is this guy,",
+        title: "Visit & Like School Youtube Page",
+        description: "",
         src: 'https://www.svgrepo.com/show/450458/link.svg',
         href: 'https://www.svgrepo.com/show/450458/link.svg'
       },
       {
-        title: "Lorem Ipsum  Lorem Hello this is this guy",
-        description: "Lorem Ipsum  Lorem Hello this is this guy, Lorem Ipsum  Lorem Hello this is this guy,",
+        title: "Visit & Like School Facebook Page",
+        description: "",
         src: 'https://www.svgrepo.com/show/450458/link.svg',
         href: 'https://www.svgrepo.com/show/450458/link.svg'
       },
@@ -190,7 +198,7 @@ function SchoolDivisions({ content }: { content: SchoolDivisionsContent }) {
   const divisions = content.cards.map((division, index) => (
     <div 
       key={index} 
-      className="relative group w-[280px] h-[400px] rounded-2xl overflow-hidden 
+      className="relative group w-[280px] h-[420px] rounded-2xl overflow-hidden 
                  bg-card dark:bg-card shadow-lg hover:shadow-xl transition-all duration-300"
     >
       <div className="relative h-[250px] w-full">
@@ -206,7 +214,7 @@ function SchoolDivisions({ content }: { content: SchoolDivisionsContent }) {
         <h3 className="text-xl font-semibold text-card-foreground mb-2">
           {division.title}
         </h3>
-        <p className="text-sm text-card-foreground">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, voluptas?</p>
+        <p className="text-sm text-card-foreground">{division.description}</p>
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"/>
       </div>
     </div>

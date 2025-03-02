@@ -41,7 +41,7 @@ export default function ContactUsPage() {
             <div className="contact-para mt-6">
             <p className="font-semibold">Address</p>
             <p className="mt-1">
-              J45M+FMX, Buddh Marg, Budh Vihar,<br/> Fraser Road Area, Patna, Bihar <br/> 800001
+              NH 227, Near Petrol Pump, Harlakhi - 847240
             </p>
           </div>
           </div>
@@ -86,7 +86,7 @@ export default function ContactUsPage() {
           <div className="contact-para mt-6">
             <p className="font-semibold">Address</p>
             <p className="mt-1">
-              J45M+FMX, Buddh Marg, Budh Vihar,<br/> Fraser Road Area, Patna, Bihar <br/> 800001
+              NH 227, Near Petrol Pump, Harlakhi - 847240
             </p>
           </div>
         </section>

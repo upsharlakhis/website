@@ -29,7 +29,7 @@ export function CarouselComp({
           delay: 4000,
         }),
       ]}
-      className={cn("w-[80%] md:w-full mx-auto h-[12rem]", className)}
+      className={cn("w-[80%] md:w-full mx-auto h-[6rem]", className)}
     >
       <CarouselContent>
         {content.notices.map((notice: any, index: number) => (
