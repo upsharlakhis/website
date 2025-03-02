@@ -131,7 +131,7 @@ const Navbar = ({navItems}: {navItems: LinkType[]}) => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", bounce: 0, duration: 0.6 }}
-              className="fixed left-0 top-0 z-[1001] h-full w-64 bg-nav shadow-lg md:hidden py-6"
+              className="fixed left-0 top-0 z-[9999999] h-full w-64 bg-nav shadow-lg md:hidden py-6"
             >
               <div className="flex h-full flex-col justify-between px-4">
                 <div className="">
