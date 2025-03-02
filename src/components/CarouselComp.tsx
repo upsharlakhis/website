@@ -26,10 +26,10 @@ export function CarouselComp({
       }}
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 4000,
         }),
       ]}
-      className={cn("w-[80%] md:w-full mx-auto", className)}
+      className={cn("w-[80%] md:w-full mx-auto h-[12rem]", className)}
     >
       <CarouselContent>
         {content.notices.map((notice: any, index: number) => (

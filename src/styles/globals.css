@@ -153,4 +153,7 @@
     .sc-text-body{
         @apply text-[0.875rem] sm:text-[1rem]
     }
+    .contact-para {
+        @apply sc-text-body text-gray-700 dark:text-gray-300
+    }
 }

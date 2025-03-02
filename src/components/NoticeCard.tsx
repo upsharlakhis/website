@@ -15,10 +15,10 @@ export function NoticeCard({
   href: string;
 }) {
   return (
-    <Link href={href} target="_blank" className="mx-auto block h-[10rem] max-w-sm transition-transform hover:scale-[1.02]">
-      <Card className="relative bg-main h-full overflow-hidden group">
+    <Link href={href} target="_blank" className="mx-auto block max-w-sm transition-transform hover:scale-[1.02]">
+      <Card className="relative bg-admission overflow-hidden group h-[12rem]">
         {/* Background Image */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <Image
             src={src}
             alt={title}
@@ -27,23 +27,23 @@ export function NoticeCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-black/50" />
-        </div>
+        </div> */}
 
         {/* Content */}
         <CardHeader className="relative">
-          <CardTitle className="text-lg font-bold text-white">
+          <CardTitle className="text-lg font-bold">
             {title}
           </CardTitle>
         </CardHeader>
 
         {description && (
           <CardContent className="relative">
-            <p className="text-sm text-gray-200">{description}</p>
+            <p className="text-sm">{description}</p>
           </CardContent>
         )}
 
         {/* Icon */}
-        <div className="absolute top-3 right-3 text-white opacity-70 group-hover:opacity-100">
+        <div className="absolute top-3 right-3 opacity-70 group-hover:opacity-100">
           <ExternalLink className="w-5 h-5" />
         </div>
       </Card>

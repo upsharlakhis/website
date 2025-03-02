@@ -53,7 +53,7 @@ const Navbar = ({navItems}: {navItems: LinkType[]}) => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
-            className="fixed top-0 left-0 w-full bg-nav box-shadow z-[999]"
+            className="fixed top-0 left-0 w-full bg-nav box-shadow z-[9999]"
         >
         <nav className="padding-x-section section-width flex items-center justify-between py-[2px]">
           <Link href={"/"}>

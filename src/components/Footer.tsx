@@ -13,12 +13,6 @@ import {
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
-// interface Contact {
-//   address: {
-    
-//   }
-// }
-
 const Footer = ({quickLinks}: {quickLinks: LinkType[]}) => {
   const pathname = usePathname();
 
